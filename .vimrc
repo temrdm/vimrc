@@ -1,6 +1,6 @@
 set nocompatible
 filetype off 
-set rtp+=/home/jackdevil/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 "-- Installed packages --
@@ -25,16 +25,15 @@ Bundle 'vim-scripts/StatusLineHighlight'
 Bundle 'morhetz/gruvbox'
 Bundle 'vim-scripts/darkspectrum'
 
+
 "-- End packages --
 
 " Default Settings
 filetype plugin indent on
 syntax on
-colorscheme gruvbox
-set bg=light
-
+colorscheme koehler
+set background=dark
 set nu "Line number
-
 " Count line up/down
 set scrolljump=7 
 set scrolloff=7 
@@ -96,3 +95,9 @@ function! ToggleBg()
         set bg=dark
     endif
 endfunc
+
+" Clojure settings
+let g:vimclojure#HighlightBuiltins = 1
+let g:vimclojure#ParenRainbow = 1
+let vimclojure#NailgunClient = "~/bin/ng"
+let vimclojure#WantNailgun = 1

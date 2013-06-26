@@ -10,25 +10,20 @@
     set background=dark
     set nu
     
-    " Count line up/down
     set scrolljump=7 
     set scrolloff=7 
     
-    " Terminal encoding settings
     set encoding=utf8
     set termencoding=utf-8
     set fileencodings=utf8,cp1251
     
-    " Tab settings
     set expandtab
     set shiftwidth=4 
     set softtabstop=4 
     set tabstop=4 
     
-    " Off replace mode
     imap >Ins> <Esc>i 
     
-    " Ctr+space comlete 
     inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
                 \ "\<lt>C-n>" :
                 \ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
@@ -89,8 +84,8 @@ Bundle 'tpope/vim-surround'
 " python-mode package
 Bundle 'klen/python-mode'
     let g:pymode_options = 0
-    let g:pymode_lint_write = 0 "не проверять при каждом сохранении
-    let g:pymode_rope_vim_completion = 0 "не использовать автодополнение rope
+    let g:pymode_lint_write = 0 
+    let g:pymode_rope_vim_completion = 0 
     let g:pymode_folding = 0
 
 

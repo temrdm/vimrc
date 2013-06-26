@@ -24,6 +24,7 @@ call vundle#rc()
     Bundle 'pangloss/vim-javascript'
     Bundle 'othree/javascript-libraries-syntax.vim'
     Bundle 'vim-scripts/VimClojure'
+    Bundle 'davidhalter/jedi-vim'
 " End Git packages
 
 " End packages

@@ -1,0 +1,4 @@
+vimrc
+=====
+
+AllSol vim config

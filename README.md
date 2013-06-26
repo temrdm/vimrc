@@ -50,7 +50,7 @@
 - aB - a {} block (with brackets)
 - ib - inner () block
 - iB - inner {} block
-- Esc - exit visual mode
+- Esc - exit visual mode
 
 ###Visual commands
 - \> - shift right
@@ -115,3 +115,9 @@
 Для того что бы заработало автодополнение необходимо устаноить пакет jedi в виртуальное окружение python.
 ```pip install jedi```
 Запускать vim нужно из этого виртуального окружения.
+
+##Surround.vim
+- :cs"' — "Hello world!" to 'Hello world!'
+- :cs'\<q> — 'Hello world!' to <q>Hello world!</q>
+- :ds" — "Hello world!" to Hello world!
+- :S\<p class="important"> — <em>Hello</em> world! to \<p class="important">\<em>Hello\</em> world!\</p>

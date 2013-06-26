@@ -114,3 +114,6 @@ Bundle 'vim-scripts/VimClojure'
 
 " jedi-vim package
 Bundle 'davidhalter/jedi-vim'
+
+"Conque
+Bundle 'basepi/vim-conque'

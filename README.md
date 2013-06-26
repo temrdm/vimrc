@@ -115,9 +115,27 @@
 Для того что бы заработало автодополнение необходимо устаноить пакет jedi в виртуальное окружение python.  
 ```pip install jedi```  
 Запускать vim нужно из этого виртуального окружения.  
+- \g переход внутрь функции  
 
 ##Surround.vim
 - :cs"' — "Hello world!" to 'Hello world!'
 - :cs'\<q> — 'Hello world!' to <q>Hello world!</q>
 - :ds" — "Hello world!" to Hello world!
 - :S\<p class="important"> — <em>Hello</em> world! to \<p class="important">\<em>Hello\</em> world!\</p>
+
+##ConqueTerm 
+Для открыти терминала нужно выполнить команду  
+```:ConqueTermSplit bash```
+
+##Debug 
+Для отладки используется ipdb  
+Что бы отладка работала нужно установить ipython и ipdb  
+```
+pip install ipython  
+pip install ipdb
+```  
+- \b установка брейкпоинта  
+```
+import ipdb; ipdb.set_trace()  
+```  
+Дальнейшая отладка происходит в терминале из которго запускался скрипт (ConqueTerm )

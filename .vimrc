@@ -10,11 +10,11 @@ Bundle 'gmarik/vundle'
 
 
 " Tagbar package
-Bundle 'Tagbar'
-    nnoremap <F8> :TagbarToggle<CR>
-    let g:tagbar_autofocus = 1
-    let g:tagbar_sort = 0 
-    let g:tagbar_foldlevel = 0
+"Bundle 'Tagbar'
+    "nnoremap <F8> :TagbarToggle<CR>
+    "let g:tagbar_autofocus = 1
+    "let g:tagbar_sort = 0 
+    "let g:tagbar_foldlevel = 0
 
 
 " Syntastic package
@@ -64,7 +64,14 @@ Bundle 'klen/python-mode'
 
 " vim-coffee-script package
 Bundle 'kchmck/vim-coffee-script'
+    let coffee_compile_vert = 1
+    setl scrollbind
+    nnoremap <F9> :CoffeeCompile watch vert<CR>
+    au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
+    let coffee_lint_options = '-f ~/.coffee/lintconfig'
 
+" vim-literate-coffeescript package
+Bundle 'mintplant/vim-literate-coffeescript'
 
 " vim-javascript package
 Bundle 'pangloss/vim-javascript'
@@ -118,3 +125,7 @@ Bundle 'basepi/vim-conque'
                 \ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
                 \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
     imap <C-@> <C-Space>
+
+    " Highlight text after 79 charset
+    highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+    match OverLength /\%79v.\+/

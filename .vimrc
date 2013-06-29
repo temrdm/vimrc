@@ -1,35 +1,8 @@
-" Default settings
+" Initialize settings
     set nocompatible
     filetype off 
     set rtp+=~/.vim/bundle/vundle/
     call vundle#rc()
-    
-    filetype plugin indent on
-    syntax on
-    colorscheme koehler
-    set background=dark
-    set nu
-    
-    set scrolljump=7 
-    set scrolloff=7 
-    
-    set encoding=utf8
-    set termencoding=utf-8
-    set fileencodings=utf8,cp1251
-    
-    set expandtab
-    set shiftwidth=4 
-    set softtabstop=4 
-    set tabstop=4 
-    
-    imap >Ins> <Esc>i 
-    
-    inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
-                \ "\<lt>C-n>" :
-                \ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
-                \ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
-                \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
-    imap <C-@> <C-Space>
 
 
 " vundle package
@@ -115,5 +88,33 @@ Bundle 'vim-scripts/VimClojure'
 " jedi-vim package
 Bundle 'davidhalter/jedi-vim'
 
-"Conque
+" Conque
 Bundle 'basepi/vim-conque'
+
+" Default settings
+    filetype plugin indent on
+    syntax on
+    colorscheme koehler
+    set background=dark
+    set nu
+    
+    set scrolljump=7 
+    set scrolloff=7 
+    
+    set encoding=utf8
+    set termencoding=utf-8
+    set fileencodings=utf8,cp1251
+    
+    set expandtab
+    set shiftwidth=4 
+    set softtabstop=4 
+    set tabstop=4 
+    
+    imap >Ins> <Esc>i 
+    
+    inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
+                \ "\<lt>C-n>" :
+                \ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
+                \ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
+                \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
+    imap <C-@> <C-Space>

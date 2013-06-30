@@ -140,13 +140,13 @@ import ipdb; ipdb.set_trace()
 ##DEPENDENCIES
 Для того что бы пользоваться всеми удобставми при разработке на python необходимо:  
 - запускать vim из виртуального окружения проекта.
-- установить в виртуальное окружение прокта следующие пакеты:
-```
-pip install ipython  
-pip install ipdb
-pip install jedi
-pip install pyflakes
-pip install pylint
-pip install pep8
+- установить в виртуальное окружение прокта следующие пакеты:  
 ```  
+pip install ipython    
+pip install ipdb    
+pip install jedi   
+pip install pyflakes   
+pip install pylint    
+pip install pep8    
+```    
 

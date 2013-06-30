@@ -118,10 +118,18 @@ Bundle 'davidhalter/jedi-vim'
 " Conque
 Bundle 'basepi/vim-conque'
 
+" Color scheme
+Bundle 'cschlueter/vim-mustang'
+colorscheme mustang
+
+" Python Syntax Checker
+Bundle 'kevinw/pyflakes-vim'
+Bundle 'vim-scripts/pep8'
+Bundle "vim-scripts/indentpython.vim"
+
 " Default settings
     filetype plugin indent on
     syntax on
-    colorscheme koehler
     set background=dark
     set nu
     set showtabline=1 

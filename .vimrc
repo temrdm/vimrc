@@ -127,6 +127,11 @@ Bundle 'kevinw/pyflakes-vim'
 Bundle 'vim-scripts/pep8'
 Bundle "vim-scripts/indentpython.vim"
 
+"VimErlang package
+Bundle 'jimenezrick/vimerl'
+autocmd Filetype erlang setlocal omnifunc=erlang_complete#Complete
+
+
 " Default settings
     filetype plugin indent on
     syntax on

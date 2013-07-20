@@ -20,6 +20,7 @@ Bundle 'vim-scripts/SyntaxComplete'
 " nerdtree package
 Bundle 'scrooloose/nerdtree'
     map <C-n> :NERDTreeToggle<CR>
+    let NERDTreeIgnore = ['\.pyc$']
 
 
 " nerdcommenter package

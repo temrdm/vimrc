@@ -124,9 +124,8 @@ Bundle 'cschlueter/vim-mustang'
 colorscheme mustang
 
 " Python Syntax Checker
-Bundle 'kevinw/pyflakes-vim'
-Bundle 'vim-scripts/pep8'
-Bundle "vim-scripts/indentpython.vim"
+Bundle 'nvie/vim-flake8'
+autocmd BufWritePost *.py call Flake8() "Запускаем проверку после каждого сохранения
 
 "VimErlang package
 Bundle 'jimenezrick/vimerl'

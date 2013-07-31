@@ -201,3 +201,7 @@ autocmd Filetype erlang setlocal omnifunc=erlang_complete#Complete
     
     " Save on losing focus
     autocmd FocusLost * :wa 
+    
+    " Indent multiple lines with tab
+    vmap <Tab> > gv
+    vmap <S-Tab> < gv

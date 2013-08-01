@@ -204,3 +204,8 @@ autocmd Filetype erlang setlocal omnifunc=erlang_complete#Complete
     " Indent multiple lines with tab
     vmap <Tab> > gv
     vmap <S-Tab> < gv
+    
+    "Remove GUI menus
+    set guioptions-=m  "remove menu bar
+    set guioptions-=T  "remove toolbar
+    set guioptions-=r 

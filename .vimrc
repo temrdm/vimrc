@@ -19,7 +19,7 @@ Bundle 'vim-scripts/SyntaxComplete'
 
 " nerdtree package
 Bundle 'scrooloose/nerdtree'
-    map <C-n> :NERDTreeToggle<CR>
+    map <C-y> :NERDTreeToggle<CR>
     let NERDTreeIgnore = ['\.pyc$']
 
 
@@ -131,6 +131,17 @@ autocmd BufWritePost *.py call Flake8() "Запускаем проверку п�
 Bundle 'jimenezrick/vimerl'
 autocmd Filetype erlang setlocal omnifunc=erlang_complete#Complete
 
+
+"multiple cursors
+Bundle 'terryma/vim-multiple-cursors'
+let g:multi_cursor_next_key='<C-n>'
+let g:multi_cursor_prev_key='<C-p>'
+let g:multi_cursor_skip_key='<C-x>'
+let g:multi_cursor_quit_key='<Esc>'
+
+"Go Lang
+Bundle 'Blackrush/vim-gocode'
+set runtimepath+=/usr/local/go/misc/vim
 
 " Default settings
     filetype plugin indent on

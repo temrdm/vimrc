@@ -26,6 +26,7 @@ Bundle 'terryma/vim-multiple-cursors'
     let g:multi_cursor_skip_key='<C-x>'
     let g:multi_cursor_quit_key='<Esc>'
 Bundle 'gregsexton/MatchTag'
+Bundle 'scrooloose/nerdcommenter'
 
 " Language support plugins
 Bundle 'mattn/emmet-vim'

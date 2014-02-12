@@ -14,7 +14,7 @@ Bundle 'bling/vim-airline'
     let g:airline#extensions#tabline#left_alt_sep = '|'
 
 " Workspace configure plugins
-" Bundle 'tpope/vim-vinegar'
+Bundle 'Shougo/vimproc.vim'
 Bundle 'scrooloose/nerdtree'
     map <C-y> :NERDTreeToggle<CR>
     let NERDTreeIgnore = ['\.pyc$']
@@ -25,10 +25,15 @@ Bundle 'terryma/vim-multiple-cursors'
     let g:multi_cursor_prev_key='<C-p>'
     let g:multi_cursor_skip_key='<C-x>'
     let g:multi_cursor_quit_key='<Esc>'
+
 Bundle 'gregsexton/MatchTag'
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'Shougo/unite.vim'
+    nnoremap <C-p> :Unite -start-insert file_rec/async<cr>
+    nnoremap <space>/ :Unite grep:.<cr>
+    nnoremap <space>s :Unite -quick-match buffer<cr>
+    let g:unite_source_file_rec_ignore_pattern = '\.\%(pyc\|png\|jpg\)$'
 
-" Language support plugins
 Bundle 'mattn/emmet-vim'
     let g:user_emmet_leader_key='<C-Z>'
 Bundle 'marijnh/tern_for_vim'

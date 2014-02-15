@@ -14,6 +14,8 @@ Bundle 'bling/vim-airline'
     let g:airline#extensions#tabline#left_alt_sep = '|'
 
 " Workspace configure plugins
+Bundle 'tpope/vim-surround'
+Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Shougo/vimproc.vim'
 Bundle 'scrooloose/nerdtree'
     map <C-y> :NERDTreeToggle<CR>
@@ -47,6 +49,11 @@ filetype plugin indent on
 syntax on
 set background=dark
 set nu
+
+noremap ; l
+noremap l k
+noremap k j
+noremap j h
 
 set encoding=utf8
 set termencoding=utf-8

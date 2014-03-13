@@ -6,6 +6,10 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Bundles here:
+NeoBundle 'Shougo/neocomplete'
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
+
 NeoBundle 'bling/vim-airline'
     let g:airline#extensions#tabline#enabled = 1
     let g:airline#extensions#tabline#left_sep = ' '
@@ -14,7 +18,17 @@ NeoBundle 'scrooloose/nerdtree'
     map <C-y> :NERDTreeToggle<CR>
     let NERDTreeIgnore = ['\.pyc$']
 NeoBundle 'tpope/vim-surround'
-NeoBundle 'Valloric/YouCompleteMe'
+NeoBundle 'mattn/emmet-vim'
+imap <expr><tab>
+  \ neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" :
+  \ emmet#isExpandable() ? "\<C-e>" :
+  \ pumvisible() ? "\<C-n>" :
+  \ "\<tab>"
+
+"NeoBundle 'Valloric/YouCompleteMe'
+"NeoBundle 'marijnh/tern_for_vim'
+    "autocmd BufEnter * set completeopt-=preview
+
 NeoBundle 'mhinz/vim-signify'
 NeoBundle 'terryma/vim-multiple-cursors'
     let g:multi_cursor_next_key='<C-n>'
@@ -23,8 +37,6 @@ NeoBundle 'terryma/vim-multiple-cursors'
     let g:multi_cursor_quit_key='<Esc>'
 NeoBundle 'gregsexton/MatchTag'
 NeoBundle 'scrooloose/nerdcommenter'
-NeoBundle 'marijnh/tern_for_vim'
-    autocmd BufEnter * set completeopt-=preview
 NeoBundle 'kien/ctrlp.vim'
     let g:ctrlp_working_path_mode = 'ra'
     let g:ctrlp_custom_ignore = {

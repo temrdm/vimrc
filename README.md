@@ -150,3 +150,7 @@ pip install pylint
 pip install pep8    
 ```    
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jackdevil/vimrc/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+

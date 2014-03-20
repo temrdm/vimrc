@@ -99,6 +99,9 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'groenewege/vim-less'
 
+NeoBundle 'vim-scripts/VimClojure'
+    au BufRead,BufNewFile *.wisp set filetype=clojure
+
 filetype plugin indent on
 
 syntax on

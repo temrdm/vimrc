@@ -29,7 +29,7 @@ NeoBundle 'Shougo/neocomplete'
     " <C-h>, <BS>: close popup and delete backword char.
     inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
 
-    inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() : "\<Space>"
+    "inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() : "\<Space>"
 
 NeoBundle 'Shougo/neosnippet'
     imap <C-k><Plug> (neosnippet_expand_or_jump)
@@ -52,10 +52,7 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'mattn/emmet-vim'
     function! s:zen_html_tab()
       let line = getline('.')
-      "let pos = getpos('.')
-      "if pos <= 1 
-          "return
-      "endif
+      let pos = getpos('.')
       if match(line, '<.*>') >= 0
         return "\<c-y>n"
       endif
@@ -69,7 +66,7 @@ NeoBundle 'mattn/emmet-vim'
 
 NeoBundle 'mhinz/vim-signify'
 
-NeoBundle 'terryma/vim-multiple-cursors'
+NeoBundle 'joedicastro/vim-multiple-cursors'
     let g:multi_cursor_next_key='<C-n>'
     let g:multi_cursor_prev_key='<C-p>'
     let g:multi_cursor_skip_key='<C-x>'
@@ -90,6 +87,8 @@ NeoBundle 't9md/vim-smalls'
     omap <C-s><Plug> (smalls)
     xmap <C-s><Plug> (smalls)
 
+NeoBundle 'vim-scripts/Decho'
+
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'Shougo/vimproc.vim'
 NeoBundle 'Shougo/vimshell.vim'
@@ -98,6 +97,7 @@ NeoBundle 'tpope/vim-jdaddy'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'groenewege/vim-less'
+NeoBundle 'pangloss/vim-javascript'
 
 NeoBundle 'vim-scripts/VimClojure'
     au BufRead,BufNewFile *.wisp set filetype=clojure
@@ -133,7 +133,7 @@ set softtabstop=4
 set tabstop=4
 
 autocmd FileType coffee setlocal softtabstop=2 tabstop=2 shiftwidth=2
-autocmd FileType javascript setlocal softtabstop=2 tabstop=2 shiftwidth=2
+autocmd FileType clojure setlocal softtabstop=2 tabstop=2 shiftwidth=2
 
 vmap <Tab> > gv
 vmap <S-Tab> < gv

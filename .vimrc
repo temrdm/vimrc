@@ -66,6 +66,8 @@ NeoBundle 'mattn/emmet-vim'
 
 NeoBundle 'mhinz/vim-signify'
 
+NeoBundle 'mhinz/vim-startify'
+
 NeoBundle 'joedicastro/vim-multiple-cursors'
     let g:multi_cursor_next_key='<C-n>'
     let g:multi_cursor_prev_key='<C-p>'
@@ -93,11 +95,13 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'Shougo/vimproc.vim'
 NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'tpope/vim-jdaddy'
+NeoBundle "daylerees/colour-schemes", { "rtp": "vim/" }
 
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'groenewege/vim-less'
 NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'burnettk/vim-angular'
 
 NeoBundle 'vim-scripts/VimClojure'
     au BufRead,BufNewFile *.wisp set filetype=clojure
@@ -110,7 +114,7 @@ set nu
 
 set background=dark
 set t_Co=256 " Vim color
- colorscheme koehler " Color scheme
+colorscheme desert " Color scheme
 set encoding=utf8
 set termencoding=utf-8
 set fileencodings=utf8,cp1251

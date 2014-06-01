@@ -29,15 +29,6 @@ NeoBundle 'Shougo/neocomplete'
     " <C-h>, <BS>: close popup and delete backword char.
     inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
 
-    "inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() : "\<Space>"
-
-NeoBundle 'Shougo/neosnippet'
-    imap <C-k><Plug> (neosnippet_expand_or_jump)
-    smap <C-k><Plug> (neosnippet_expand_or_jump)
-    xmap <C-k><Plug> (neosnippet_expand_target)
-
-NeoBundle 'Shougo/neosnippet-snippets'
-
 NeoBundle 'bling/vim-airline'
     let g:airline#extensions#tabline#enabled = 1
     let g:airline#extensions#tabline#left_sep = ' '
@@ -49,24 +40,7 @@ NeoBundle 'scrooloose/nerdtree'
 
 NeoBundle 'tpope/vim-surround'
 
-NeoBundle 'mattn/emmet-vim'
-    function! s:zen_html_tab()
-      let line = getline('.')
-      let pos = getpos('.')
-      if match(line, '<.*>') >= 0
-        return "\<c-y>n"
-      endif
-      return "\<c-y>,"
-    endfunction
-    autocmd FileType html imap <buffer><expr><tab> <sid>zen_html_tab()
-
-"NeoBundle 'Valloric/YouCompleteMe'
-"NeoBundle 'marijnh/tern_for_vim'
-    "autocmd BufEnter * set completeopt-=preview
-
 NeoBundle 'mhinz/vim-signify'
-
-NeoBundle 'mhinz/vim-startify'
 
 NeoBundle 'joedicastro/vim-multiple-cursors'
     let g:multi_cursor_next_key='<C-n>'

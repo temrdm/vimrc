@@ -1,33 +1,15 @@
+if !1 | finish | endif
+
 if has('vim_starting')
-    set nocompatible 
-    set runtimepath+=~/.vim/bundle/neobundle.vim/
+  if &compatible
+    set nocompatible
+  endif
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
-call neobundle#rc(expand('~/.vim/bundle/'))
+
+call neobundle#begin(expand('~/.vim/bundle/'))
+
 NeoBundleFetch 'Shougo/neobundle.vim'
-
-" Bundles here:
-NeoBundle 'Shougo/neocomplete'
-    let g:acp_enableAtStartup = 0
-    " Use neocomplete.
-    let g:neocomplete#enable_at_startup = 1
-    " Use smartcase.
-    let g:neocomplete#enable_smart_case = 1
-    " Set minimum syntax keyword length.
-    let g:neocomplete#sources#syntax#min_keyword_length = 2
-    let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
-    " Define keyword.
-    if !exists('g:neocomplete#keyword_patterns')
-        let g:neocomplete#keyword_patterns = {}
-    endif
-    let g:neocomplete#keyword_patterns['default'] = '\h\w*'
-
-    " Plugin key-mappings.
-    inoremap <expr><C-l> neocomplete#complete_common_string()
-
-    " <TAB>: completion.
-    inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-    " <C-h>, <BS>: close popup and delete backword char.
-    inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
 
 NeoBundle 'bling/vim-airline'
     let g:airline#extensions#tabline#enabled = 1
@@ -41,12 +23,6 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tpope/vim-surround'
 
 NeoBundle 'mhinz/vim-signify'
-
-NeoBundle 'joedicastro/vim-multiple-cursors'
-    let g:multi_cursor_next_key='<C-n>'
-    let g:multi_cursor_prev_key='<C-p>'
-    let g:multi_cursor_skip_key='<C-x>'
-    let g:multi_cursor_quit_key='<Esc>'
 
 NeoBundle 'gregsexton/MatchTag'
 NeoBundle 'scrooloose/nerdcommenter'
@@ -66,19 +42,15 @@ NeoBundle 't9md/vim-smalls'
 NeoBundle 'vim-scripts/Decho'
 
 NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'Shougo/vimproc.vim'
-NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'tpope/vim-jdaddy'
 NeoBundle "daylerees/colour-schemes", { "rtp": "vim/" }
 
-NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'groenewege/vim-less'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'burnettk/vim-angular'
 
-NeoBundle 'vim-scripts/VimClojure'
-    au BufRead,BufNewFile *.wisp set filetype=clojure
+call neobundle#end()
 
 filetype plugin indent on
 
@@ -94,7 +66,7 @@ set termencoding=utf-8
 set fileencodings=utf8,cp1251
 set title                   " show title in console title bar
 set backspace=indent,eol,start
-set laststatus=2 
+set laststatus=2
 
 set clipboard=unnamed
 

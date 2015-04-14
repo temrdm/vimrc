@@ -1,4 +1,4 @@
-#AllSol Vim Config
+#temrdm Vim Config
 
 ##Команды Vim
 ###Cursor movement:  
